@@ -1,0 +1,371 @@
+@use "../../sass/index" as *;
+
+.solar {
+  background-color: $color-black;
+  color: $color-white;
+  position: relative;
+  transition: filter 0.5s ease;
+
+  &.darken {
+    filter: blur(5px);
+    transition: filter 1.5s ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+    }
+  }
+
+  &__hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15rem;
+    align-items: center;
+    position: relative;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: filter 0.5s ease;
+
+    &__info {
+      margin-top: 8rem;
+      text-align: center;
+      color: $color-black;
+
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+      }
+
+      p {
+        font-weight: 400;
+      }
+    }
+
+    &__specs {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+      text-align: center;
+      padding: 3.5rem;
+      color: $color-white;
+      background: linear-gradient(to top, black, black, transparent);
+
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 0.8rem;
+      }
+
+      button {
+        outline: 3px solid $color-white;
+        transition: color 0.5s ease, background 0.5s ease;
+      }
+
+      button:hover {
+        color: $color-black;
+        background: $color-white;
+      }
+
+      @include tablet {
+        padding: 5rem;
+      }
+
+      @include mobile {
+        padding: 2rem;
+      }
+    }
+
+    @include tablet {
+      height: 80vh;
+    }
+  }
+
+  &__section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3rem;
+    background-color: $color-white;
+
+    &__cover {
+      width: 100%;
+      height: 75vh;
+      padding-bottom: 2.5rem;
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 8rem;
+      text-align: center;
+      position: relative;
+    }
+
+    &__specs {
+      width: 100%;
+      padding-block: 3rem;
+      display: flex;
+      justify-content: center;
+
+      background-color: $color-white;
+      color: $color-text;
+
+      &__div {
+        width: 70%;
+        display: flex;
+        justify-content: space-around;
+
+        &__main {
+          button {
+            margin-top: 1rem;
+            outline: 2px solid $color-black;
+            background: $color-white;
+            transition: color 0.5s ease, background 0.5s ease;
+          }
+
+          button:hover {
+            background: $color-black;
+            color: $color-white;
+            outline: 2px solid $color-white;
+          }
+        }
+
+        &__secondary {
+          max-width: 50%;
+        }
+
+        @include mobile {
+          width: 75%;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 2rem;
+
+          &__secondary {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &__about {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    background: $color-white;
+    color: $color-text;
+
+    &__media {
+      width: 85%;
+      position: relative;
+
+      video {
+        min-width: 100%;
+        max-height: 100vh;
+        object-fit: cover;
+      }
+    }
+
+    &__info {
+      align-self: stretch;
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 2rem;
+
+      &__text {
+        h3 {
+          font-weight: 400;
+        }
+
+        h2 {
+          font-weight: 500;
+          font-size: 2rem;
+        }
+
+        p {
+          padding-top: 1.5rem;
+          font-weight: 400;
+          font-size: 0.95rem;
+        }
+      }
+
+      @media screen and (max-width: 1200px) {
+        width: 35%;
+      }
+    }
+
+    button {
+      background: $color-white;
+      outline: 2px solid $color-black;
+      transition: color 0.5s ease, background 0.5s ease;
+    }
+
+    button:hover {
+      background: $color-black;
+      color: $color-white;
+    }
+
+    @media screen and (max-width: 825px) {
+      flex-wrap: wrap;
+
+      &__media {
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      &__info {
+        width: 100%;
+
+        &__btn {
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+
+  &__specs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+      width: 100%;
+      padding: 10rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & > div {
+        flex: 1;
+      }
+
+      &__specs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 5rem;
+        gap: 3rem;
+
+        &__title {
+          font-size: 1.25rem;
+          h2 {
+            font-weight: 600;
+          }
+          span {
+            font-weight: 300;
+          }
+        }
+
+        &__details {
+          display: flex;
+          flex-wrap: wrap;
+
+          &__item {
+            width: 40%;
+            font-size: 0.9rem;
+            padding-block: 0.75rem;
+            margin-bottom: 3rem;
+            position: relative;
+
+            p:first-child {
+              font-weight: 600;
+            }
+            p:last-child {
+              font-weight: 300;
+            }
+
+            &::before {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 10%;
+              height: 1px;
+              opacity: 0.5;
+              background-color: $color-white;
+            }
+          }
+        }
+      }
+
+      @include tablet {
+        flex-direction: column;
+        padding: 0;
+      }
+    }
+  }
+
+  &__footer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+
+      font-size: 1.25rem;
+      h2 {
+        font-weight: 600;
+      }
+      p {
+        font-size: 1.15rem;
+        font-weight: 400;
+      }
+
+      &__btns {
+        width: 100%;
+
+        button {
+          width: 75%;
+          outline: 2px solid $color-white;
+          transition: color 0.5s ease, background 0.5s ease;
+
+          &:hover {
+            background: $color-white;
+            color: $color-black;
+          }
+
+          &:first-child {
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,200 @@
+@use "../../sass/index" as *;
+
+.shop {
+  width: 100%;
+  padding-bottom: 5rem;
+  transition: filter 0.5s ease;
+
+  &.darken {
+    filter: blur(5px);
+    transition: filter 1.5s ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #fff, $alpha: 0.5);
+    }
+  }
+
+  .swiper-scrollbar-drag {
+    background: $color-white;
+  }
+
+  &__hero__item {
+    position: relative;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &__first {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 20%;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $color-white;
+
+      p {
+        font-size: 1.25rem;
+      }
+
+      h3 {
+        font-size: 1.35rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+
+    h3 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-size: 0.8rem;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  &__products {
+    width: 100%;
+
+    &__item {
+      background-color: #f8f8f8;
+      position: relative;
+      width: 95%;
+      margin-inline: auto;
+      height: 100%;
+
+      &:hover {
+        cursor: pointer;
+        border-bottom: 2px solid rgba($color: #adabab57, $alpha: 0.5);
+        border-right: 2px solid rgba($color: #adabab57, $alpha: 0.5);
+      }
+
+      h3 {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 2rem;
+        text-align: center;
+        color: #212121;
+        font-size: 0.95rem;
+        letter-spacing: 2px;
+        font-weight: 600;
+        text-transform: uppercase;
+        background-color: #f8f8f8;
+      }
+
+      @include tablet {
+        width: 85%;
+      }
+
+      @include mobile {
+        width: 75%;
+      }
+    }
+  }
+
+  &__long {
+    width: 95%;
+    height: 50vh;
+    margin-inline: auto;
+    margin-top: 5rem;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20rem;
+
+    cursor: pointer;
+
+    &__info {
+      h3 {
+        font-size: 1.55rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__short {
+    width: 95%;
+    height: 50vh;
+    margin-inline: auto;
+    margin-top: 5rem;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+
+    &__item {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      background-size: cover;
+      background-position: center;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      cursor: pointer;
+
+      h3 {
+        color: $color-white;
+        font-size: 1.55rem;
+        font-weight: 600;
+      }
+    }
+
+    @include tablet {
+      width: 100%;
+      height: 90vh;
+      flex-direction: column;
+
+      &__item:first-child {
+        width: 75%;
+        align-self: flex-end;
+      }
+      &__item:last-child {
+        width: 75%;
+        align-self: flex-start;
+      }
+    }
+
+    @include mobile {
+      width: 95%;
+      height: 70vh;
+
+      &__item:first-child,
+      &__item:last-child {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+@use "../../sass/index" as *;
+
+.header {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  transition: background-color 1s ease, color 1s ease;
+
+  &.scroll {
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    color: $color-white;
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &__logo {
+      width: 25%;
+      font-family: $font-header;
+      letter-spacing: 0.75rem;
+      text-transform: uppercase;
+    }
+
+    &__menu {
+      width: 100%;
+      ul {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > * ~ * {
+          margin-left: 1rem;
+        }
+      }
+    }
+
+    &__submenu {
+      width: 25%;
+
+      ul {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+
+    a,
+    .menu {
+      border-radius: 35px;
+      padding: 0.35rem 1.1rem;
+      cursor: pointer;
+      transition: background-color 1s ease;
+    }
+
+    &__menu a:hover,
+    &__submenu a:hover,
+    &__mobnav a:hover,
+    .menu:hover {
+      background-color: rgba($color-footer, 0.25);
+    }
+
+    &__mobnav {
+      width: 18rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 2rem;
+      background: transparent;
+
+      &.active {
+        background: $color-white;
+        color: $color-text;
+        transition: background 1.5s ease;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 1.15rem 3rem 2rem 2rem;
+        box-shadow: 1px 1px 10px 2px rgb(194, 192, 192);
+      }
+
+      &__nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+
+        ul {
+          width: 100%;
+
+          li {
+            width: 100%;
+            margin-bottom: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}

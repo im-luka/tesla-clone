@@ -1,0 +1,145 @@
+@use "../../sass/index" as *;
+
+.auth {
+  width: 100%;
+  margin-top: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: filter 0.5s ease;
+
+  &.darken {
+    filter: blur(5px);
+    transition: filter 1.5s ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #fff, $alpha: 0.5);
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    &__title {
+      margin-bottom: 1.75rem;
+
+      h1 {
+        font-weight: 600;
+      }
+    }
+
+    &__inputs {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      label {
+        margin-left: 1rem;
+        margin-bottom: 0.25rem;
+        color: #5c5d61;
+        font-size: 0.85rem;
+        opacity: 0.95;
+      }
+
+      input {
+        margin-bottom: 2rem;
+        min-width: 20rem;
+        height: 2.5rem;
+        border-radius: 2rem;
+        background-color: $color-btn-light;
+        outline: 0;
+        border: 0;
+        font-size: 0.9rem;
+        padding-left: 1rem;
+
+        &:focus {
+          border: 1px solid $color-btn-dark;
+        }
+      }
+    }
+
+    &__btn {
+      width: 100%;
+      margin-bottom: 2.5rem;
+
+      button {
+        width: 100%;
+        font-weight: 500;
+        letter-spacing: 1px;
+      }
+
+      .btn-sign {
+        background: #3d69e1;
+        color: $color-white;
+        opacity: 0.9;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      .btn-secondary {
+        background-color: $color-white;
+        outline: 2px solid $color-black;
+        transition: color 0.5s ease, background 0.5s ease;
+
+        &:hover {
+          background-color: $color-black;
+          color: $color-white;
+        }
+      }
+    }
+
+    &__questions {
+      width: 100%;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #5c5d61;
+
+      span {
+        text-decoration: underline;
+      }
+    }
+
+    &__span {
+      width: 100%;
+      margin-block: 2rem;
+      text-align: center;
+      color: #5c5d61;
+      font-size: 0.95rem;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 1%;
+        top: 50%;
+        height: 1px;
+        opacity: 0.25;
+        width: 40%;
+        background-color: #5c5d61;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 1%;
+        top: 50%;
+        height: 1px;
+        opacity: 0.25;
+        width: 40%;
+        background-color: #5c5d61;
+      }
+    }
+  }
+}

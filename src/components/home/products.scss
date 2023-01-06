@@ -1,0 +1,55 @@
+@use "../../sass/index" as *;
+
+.products {
+  width: 100%;
+  height: 110vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 15rem;
+  align-items: center;
+  position: relative;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: filter 0.5s ease;
+
+  &.darken {
+    filter: blur(5px);
+    transition: filter 1.5s ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+    }
+  }
+
+  &__info {
+    text-align: center;
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    p {
+      font-weight: 400;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: 2rem;
+  }
+
+  @include mobile {
+    height: 85vh;
+    gap: 7rem;
+  }
+}

@@ -1,0 +1,113 @@
+@use "../../sass/index" as *;
+
+.details {
+  width: 100%;
+  padding: 8rem 3rem 3rem 3rem;
+  transition: filter 0.5s ease;
+
+  &.darken {
+    filter: blur(5px);
+    transition: filter 1.5s ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #fff, $alpha: 0.5);
+    }
+  }
+
+  &__title {
+    margin-bottom: 1.75rem;
+    font-size: 1rem;
+    h1 {
+      font-weight: 600;
+      text-transform: capitalize;
+      letter-spacing: 1px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 3rem;
+    font-size: 0.9rem;
+    h2 {
+      font-weight: 500;
+      text-transform: capitalize;
+      letter-spacing: 1px;
+    }
+  }
+
+  &__products {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    &__item {
+      width: 30%;
+      margin-bottom: 7.5rem;
+
+      img {
+        margin-bottom: 1rem;
+      }
+
+      p {
+        padding-left: 0.25rem;
+        font-size: 0.9rem;
+        font-weight: 700;
+      }
+
+      @include tablet {
+        width: 47%;
+        margin-bottom: 5rem;
+      }
+
+      @media screen and (max-width: 450px) {
+        width: 100%;
+        margin-bottom: 3rem;
+      }
+
+      &__main {
+        position: relative;
+
+        &__hover {
+          display: none;
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+
+          h2 {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            background: $color-white;
+            padding: 2rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+          box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.5),
+            0.125em 0.125em 0.25em rgba(0, 0, 0, 0.5);
+        }
+
+        &:hover &__hover {
+          display: block;
+        }
+      }
+    }
+  }
+}
