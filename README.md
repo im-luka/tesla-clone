@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Tesla Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+*Modern & responsive Tesla clone application displaying cars, solar panels & roofs, shop and much more.*
 
-## Available Scripts
+### For starting project locally:
 
-In the project directory, you can run:
+Run `npm install` after downloading the project.
 
-### `npm start`
+Create Firebase project and import provided `tesla-data.json` file in realtime database.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Create `.env` file at the root of the project named `REACT_APP_API` and assign your Firebase realtime database key.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Run `npm start` and enjoy!
 
-### `npm test`
+<hr />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##### Be sure to check the website for the best experience!
+> [See website](https://tesla-cars-clone.web.app/)
+<hr />
 
-### `npm run build`
+### Stack used: React, SCSS, Firebase
+<hr />
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### *Home Page*
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![tesla01](https://user-images.githubusercontent.com/46372998/178103062-0afc76a2-0453-461a-a16f-17c237cd6058.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### *Model 3 Page* 
+##### - I posted screenshots only for Model 3! Please check the website for other cars and solars! 
 
-### `npm run eject`
+![tesla02](https://user-images.githubusercontent.com/46372998/178103063-9651700c-7e34-4a86-8bae-efadcaec8113.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![tesla03](https://user-images.githubusercontent.com/46372998/178103064-afb374c5-ab2b-4e33-928c-176458eccf09.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![tesla04](https://user-images.githubusercontent.com/46372998/178103065-abacc4f3-6134-4559-9feb-581a1d75b536.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![tesla05](https://user-images.githubusercontent.com/46372998/178103066-4fdb66f1-312e-475c-8a41-19c74cdd5ca2.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![tesla06](https://user-images.githubusercontent.com/46372998/178103067-227bff2d-ac7c-4499-9603-499af6ed203a.png)
 
-## Learn More
+![tesla07](https://user-images.githubusercontent.com/46372998/178103068-89a8f373-1918-46d0-a9eb-38044827c9c1.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![tesla08](https://user-images.githubusercontent.com/46372998/178103069-dc4398a3-3aec-4af3-ba78-7460f830bc8e.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![tesla09](https://user-images.githubusercontent.com/46372998/178103070-6a25cfb2-99cd-43d9-9edc-babbe83346dd.png)
 
-### Code Splitting
+![tesla10](https://user-images.githubusercontent.com/46372998/178103071-02ab93b1-0692-4d23-bb41-67a5db3c3eae.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![tesla11](https://user-images.githubusercontent.com/46372998/178103072-ea6b26b1-1a76-4702-81c0-59f09337a659.png)
 
-### Analyzing the Bundle Size
+![tesla12](https://user-images.githubusercontent.com/46372998/178103073-7f5df7ff-3604-45ee-b544-7cbfac9040e8.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![tesla13](https://user-images.githubusercontent.com/46372998/178103074-9e5ec24e-dd5c-4085-a09d-ec0b2f6e2c55.png)
 
-### Making a Progressive Web App
+#### *Shop Page*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![tesla14](https://user-images.githubusercontent.com/46372998/178103076-6f5cb9d4-8b24-4728-aede-73628f37b100.png)
 
-### Advanced Configuration
+![tesla15](https://user-images.githubusercontent.com/46372998/178103077-274b9bee-5297-4d2d-be15-fdf00a3896d4.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+#### *Auth Page*
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![tesla16](https://user-images.githubusercontent.com/46372998/178103078-d91b9bff-6cfc-4da2-8e8b-8b3300ad6f8d.png)
