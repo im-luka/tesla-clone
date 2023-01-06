@@ -1,4 +1,4 @@
-# Tesla Clone
+# 🚘 Tesla Clone
 
 *Modern & responsive Tesla clone application displaying cars, solar panels & roofs, shop and much more.*
 
