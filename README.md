@@ -8,7 +8,7 @@ Run `npm install` after downloading the project.
 
 Create Firebase project and import provided `tesla-data.json` file in realtime database.
 
-Create `.env` file at the root of the project named `REACT_APP_API` and assign your Firebase realtime database key.
+Create `.env` file at the root of the project with variable `REACT_APP_API` and assign your Firebase realtime database key to it.
 
 Run `npm start` and enjoy!
 
