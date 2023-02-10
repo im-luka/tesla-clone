@@ -1,6 +1,6 @@
 # 🚘 Tesla Clone
 
-*Modern & responsive Tesla clone application displaying cars, solar panels & roofs, shop and much more.*
+_Modern & responsive Tesla clone application displaying cars, solar panels & roofs, shop and much more._
 
 ### For starting project locally:
 
@@ -12,18 +12,18 @@ Create `.env` file at the root of the project with variable `REACT_APP_API` and 
 
 Run `npm start` and enjoy!
 
-<hr />
+---
 
 ##### Be sure to check the website for the best experience!
 > [See website](https://tesla-cars-clone.web.app/)
-<hr />
+---
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 ![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white)
 ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
-<hr />
+---
 
 #### *Home Page*
 
