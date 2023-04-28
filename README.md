@@ -65,4 +65,3 @@ Run `npm start` and enjoy!
 #### *Auth Page*
 
 ![tesla16](https://user-images.githubusercontent.com/46372998/178103078-d91b9bff-6cfc-4da2-8e8b-8b3300ad6f8d.png)
-
